@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sudo nc -4 -k -l -v localhost 98
