@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# coucou les coco
 sudo sed -i '/\slocalhost\b/d' /etc/hosts
 echo "127.0.0.2   localhost" | sudo tee -a /etc/hosts
 

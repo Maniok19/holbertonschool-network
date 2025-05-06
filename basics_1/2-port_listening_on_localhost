@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# coucou les coco
 sudo nc -4 -k -l -v localhost 98
