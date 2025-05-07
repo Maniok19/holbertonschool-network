@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 # configures an Ubuntu server with localhost to 127.0.0.2
-# Backup the original hosts file
-cp /etc/hosts ~/hosts.backup
 
-# Create modified hosts file
-echo "127.0.0.2 localhost" > ~/hosts.new
-echo "8.8.8.8 facebook.com" >> ~/hosts.new
-# Add rest of the original /etc/hosts content (excluding localhost entries)
-grep -v "localhost\|facebook.com" /etc/hosts >> ~/hosts.new
-
-# Replace the hosts file with our modified version
-cp -f ~/hosts.new /etc/hosts
+echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts
+echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts
